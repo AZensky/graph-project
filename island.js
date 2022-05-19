@@ -36,9 +36,11 @@ function islandSize(row, col, graph) {
         while (stack.length) {
           let [r, c] = stack.pop();
           let neighbors = getNeighbors(r, c, graph);
+
           for (let neighbor of neighbors) {
             let [r, c] = neighbor;
             let key = `${r}, ${c}`;
+            
             if (!visited.has(key)) {
               visited.add(key);
               currSize++;
