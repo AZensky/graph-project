@@ -29,13 +29,13 @@ Note that this is **not** an adjacency matrix!.
 
 ```js
 matrix = [
-    [1,1,1,0,0],
-    [0,1,1,0,1],
-    [0,1,1,0,1],
-]
+  [1, 1, 1, 0, 0],
+  [0, 1, 1, 0, 1],
+  [0, 1, 1, 0, 1],
+];
 
-islandSize(0, 0, matrix);  // 7
-islandSize(2, 4, matrix);  // 2
+islandSize(0, 0, matrix); // 7
+islandSize(2, 4, matrix); // 2
 ```
 
 `islandSize(row, col, matrix)` takes in three arguments: a row, column and a
@@ -43,7 +43,7 @@ binary matrix. It will return the size of the island consisting of adjacent 1s
 starting from the row and column.
 
 **Tip:** When working with 2d arrays, always use `row` and `col`, or row and
-column, to access items in the matrix.  It's backwards from what you're used to!
+column, to access items in the matrix. It's backwards from what you're used to!
 If you try to use `y` and `x`, you **will** get confused and reference them out
 of order, as `x` and `y`.
 
@@ -66,14 +66,14 @@ neighbors are the adjacent 1s.
 coordinates of all the adjacent squares containing 1s.
 
 ```js
-[[1,1,1,0,0],
- [0,1,1,0,1],
- [0,1,1,0,1]]
+[
+  [1, 1, 1, 0, 0],
+  [0, 1, 1, 0, 1],
+  [0, 1, 1, 0, 1],
+];
 ```
 
-For the above matrix, `getNeighbors(1, 1, matrix)` would return `[[0, 1], [1,
-2], [2, 1]]` since the neighbors of row 1, col 1 are `[0, 1]`, `[1, 0]`, `[1,
-2]`, and `[2, 1]`. All of these contain 1s except for `[1, 0]` which is
+For the above matrix, `getNeighbors(1, 1, matrix)` would return `[[0, 1], [1, 2], [2, 1]]` since the neighbors of row 1, col 1 are `[0, 1]`, `[1, 0]`, `[1, 2]`, and `[2, 1]`. All of these contain 1s except for `[1, 0]` which is
 excluded.
 
 Read the specs in `test/island-specs.js` for more details.
